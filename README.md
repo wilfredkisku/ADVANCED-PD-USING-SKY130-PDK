@@ -14,3 +14,30 @@
   Automating the process of RTL to GDSII is a the complete design flow from the designing of RTL using HDL languages such as ```verilog``` and ```VHDL``` or higher level abstration languages such as ```SystemC```, ```High-Level-Sysnthesis``` (HLS). There are newer abstraction for designing RTL such as ```BlueSpec Verilog```  and ```BlueSpec Haskell```.  The complete steps for in sequence can be listed using the openlane flow diagram as show below.
   
   ![alt text](https://github.com/wilfredkisku/advanced_pd_using_sky130_pdk/blob/main/images/Day1/04_flow.png)
+
+  1. RTL Synthesis
+      1. `yosys` - Synthesis task is to convert the language elements to a netlist RTL
+      2. `abc` - Synthesis and verification of binary sequential logic circuits appearing in synchronous hardware designs. ABC combines scalable logic optimization based on And-Inverter Graphs (AIGs), optimal-delay DAG-based technology mapping for look-up tables and standard cells, and innovative algorithms for sequential synthesis and verification.(![link](http://people.eecs.berkeley.edu/~alanmi/abc/))
+  2. Timing analysis 
+      1. `OpenSTA` - Pefroms static timing analysis on the resulting netlist to generate timing reports
+  3. Floorplan and PDN
+      1. `init_fp` - Defines the core area for the macro as well as the rows (used for placement) and the tracks (used for routing)
+      2. `ioplacer` - Places the macro input and output ports
+      3. `pdn` - Generates the power distribution network
+      4. `tapcell` - Inserts welltap and decap cells in the floorplan
+  4. Placement
+      1. `RePLace` - Performs global placement
+      2. `Resizer` - Performs optional optimizations on the design
+      3. `OpenPhySyn` - Performs timing optimizations on the design
+      4. `OpenDP` - Perfroms detailed placement to legalize the globally placed components
+  5. CTS
+      1. `TritonCTS` - Synthesizes the clock distribution network (the clock tree)
+  6. Routing *
+      1. `FastRoute` - Performs global routing to generate a guide file for the detailed router
+      2. `TritonRoute` - Performs detailed routing
+      3. `SPEF-Extractor` - Performs SPEF extraction
+  7. GDSII Generation
+      1. `Magic` - Streams out the final GDSII layout file from the routed def
+  8. Checks
+      1. `Magic` - Performs DRC Checks & Antenna Checks
+      2. `Netgen` - Performs LVS Checks
