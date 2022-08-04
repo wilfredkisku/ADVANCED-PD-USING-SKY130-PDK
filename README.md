@@ -17,7 +17,7 @@
 
   1. RTL Synthesis
       1. `yosys` - Synthesis task is to convert the language elements to a netlist RTL
-      2. `abc` - Synthesis and verification of binary sequential logic circuits appearing in synchronous hardware designs. ABC combines scalable logic optimization based on And-Inverter Graphs (AIGs), optimal-delay DAG-based technology mapping for look-up tables and standard cells, and innovative algorithms for sequential synthesis and verification.([!link](http://people.eecs.berkeley.edu/~alanmi/abc/))
+      2. `abc` - Synthesis and verification of binary sequential logic circuits appearing in synchronous hardware designs. ABC combines scalable logic optimization based on And-Inverter Graphs (AIGs), optimal-delay DAG-based technology mapping for look-up tables and standard cells, and innovative algorithms for sequential synthesis and verification.([link](http://people.eecs.berkeley.edu/~alanmi/abc/))
   2. Timing analysis 
       1. `OpenSTA` - Pefroms static timing analysis on the resulting netlist to generate timing reports
   3. Floorplan and PDN
