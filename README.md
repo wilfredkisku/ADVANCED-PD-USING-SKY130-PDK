@@ -7,7 +7,7 @@
   - [Day 1](#day-1)
     - [OpenROAD flow](#openroad-flow)
     - [OpenSource Tools for RTL to GDSII Flow](#opensource-tools-for-rtl-to-gdsii-flow)
-    - [Tools Usage ]  
+    - [Tools Usage](#tool-usage) 
 
 # Day 1 
 # OpenROAD flow
@@ -61,6 +61,18 @@ OpenLANE integrated several key open source tools over the execution stages:
   - LVS check: [Netgen](https://github.com/RTimothyEdwards/netgen)
   - Antenna Checks: [Magic](https://github.com/RTimothyEdwards/magic)
   - Circuit Validity Checker: [CVC](https://github.com/d-m-bailey/cvc)
+
+# Tool Usage
+  For invoking OpenLANE in Linux Ubuntu, we should first run the docker everytime we use OpenLANE. This is done by using the following script:
+    
+    docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6
+   
+   A custom shell script or commands can be generated to make the task simpler.
+   
+   - To invoke OpenLANE run the `./flow.tcl` script.
+   - OpenLANE supports two modes of operation: interactive and autonomous.
+   - To use interactive mode use `-interactive` flag with `./flow.tcl`
+
 
    <img src="images/Day1/day01_01_pdks.png">
    <img src="images/Day1/day01_02_tools.png">
