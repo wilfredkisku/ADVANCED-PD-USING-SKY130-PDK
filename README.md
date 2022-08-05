@@ -91,8 +91,16 @@ A custom shell script or commands can be generated to make the task simpler.
    
    <img src="images/Day1/day01_04_openlanedocker.png">
    <img src="images/Day1/day01_05_configfile.png">
+   
+The figure ablve shows the content of the ```config.tcl``` file. It sets the path of the design files, timing files (SDC) files and the design name. Also the clock speed is assigned, with the ```clk``` port name.
+
    <img src="images/Day1/day01_06_fileprep.png">
    <img src="images/Day1/day01_07_flopratio.png">
+
+One of the important evalations that gives a picture to the design that has been synthesized is the Flops to cell ratio between the number of flip flops generated and the total number of cells in the design. The design under consideration is the ```Picorv32a```, which is a RISC V archicture design.
+
+$\text{Flops to Cell ratio} = \frac{\text{Number of FFs}}{\text{Number of Cells}}$
+$\text{Flops to Cell ratio} = \frac{\text{1613}}{\text{14876}} = 0.1084 \text{(or)} 10.84\text{\%}$
 
 # Day 2
 # Lesson 1
