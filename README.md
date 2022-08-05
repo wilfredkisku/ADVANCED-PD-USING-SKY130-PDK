@@ -47,12 +47,12 @@ Listed in details are the tools that are included in the OpenLane flow that incl
 OpenLANE integrated several key open source tools over the execution stages:
   - RTL Synthesis, Technology Mapping, and Formal Verification : [yosys + abc](https://github.com/YosysHQ/yosys)
   - Static Timing Analysis: [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA)
-  - Floor Planning: [init_fp], [ioPlacer], [pdn] and [tapcell]
-  - Placement: [RePLace] (Global), [Resizer] and [OpenPhySyn] (Optimizations), and [OpenDP] (Detailed)
-  - Clock Tree Synthesis: [TritonCTS]
-  - Fill Insertion: [OpenDP/filler_placement]
-  - Routing: [FastRoute] (Global) and [TritonRoute] (Detailed)
-  - SPEF Extraction: [SPEF-Extractor]
+  - Floor Planning: [init_fp](https://github.com/The-OpenROAD-Project/OpenROAD/tree/master/src/init_fp), [ioPlacer](https://github.com/The-OpenROAD-Project/OpenROAD/tree/openroad/src/ioPlacer), [pdn](https://github.com/The-OpenROAD-Project/OpenROAD/tree/openroad/src/pdngen) and [tapcell](https://github.com/The-OpenROAD-Project/OpenROAD/tree/openroad/src/tapcell)
+  - Placement: [RePLace](https://github.com/The-OpenROAD-Project/OpenROAD/tree/openroad/src/replace) (Global), [Resizer](https://github.com/The-OpenROAD-Project/OpenROAD/tree/openroad/src/resizer) and [OpenPhySyn](https://github.com/scale-lab/OpenPhySyn) (Optimizations), and [OpenDP](https://github.com/The-OpenROAD-Project/OpenROAD/tree/openroad/src/opendp) (Detailed)
+  - Clock Tree Synthesis: [TritonCTS](https://github.com/The-OpenROAD-Project/OpenROAD/tree/master/src/TritonCTS)
+  - Fill Insertion: [OpenDP/filler_placement](https://github.com/The-OpenROAD-Project/OpenROAD/tree/openroad/src/opendp)
+  - Routing: [FastRoute](https://github.com/The-OpenROAD-Project/OpenROAD/tree/openroad/src/FastRoute) (Global) and [TritonRoute](https://github.com/The-OpenROAD-Project/TritonRoute) (Detailed)
+  - SPEF Extraction: [SPEF-Extractor](https://github.com/HanyMoussa/SPEF_EXTRACTOR)
   - GDSII Streaming out: [Magic](https://github.com/RTimothyEdwards/magic)
   - DRC Checks: [Magic](https://github.com/RTimothyEdwards/magic)
   - LVS check: [Netgen](https://github.com/RTimothyEdwards/netgen)
