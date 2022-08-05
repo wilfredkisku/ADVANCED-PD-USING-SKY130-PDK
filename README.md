@@ -60,6 +60,10 @@ OpenLANE integrated several key open source tools over the execution stages:
   - Antenna Checks: [Magic](https://github.com/RTimothyEdwards/magic)
   - Circuit Validity Checker: [CVC](https://github.com/d-m-bailey/cvc)
 
-   <img src="images/d2_floorplan_invoke_magic_cmd.JPG">
-   <img src="images/d2_floorplan_magic.JPG">
-   <img src="images/d2_floorplan_magic_expand.JPG">
+   <img src="images/Day1/day01_01_pdks.png">
+   <img src="images/Day1/day01_02_tools.png">
+   <img src="images/Day1/day01_03_libfiles.png">
+   <img src="images/Day1/day01_01_openlanedocker.png">
+   <img src="images/Day1/day01_01_configfile.png">
+   <img src="images/Day1/day01_01_fileprep.png">
+   <img src="images/Day1/day01_01_flopratio.png">
