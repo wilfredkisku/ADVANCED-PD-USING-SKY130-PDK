@@ -63,20 +63,28 @@ OpenLANE integrated several key open source tools over the execution stages:
   - Circuit Validity Checker: [CVC](https://github.com/d-m-bailey/cvc)
 
 # Tool Usage
-  For invoking OpenLANE in Linux Ubuntu, we should first run the docker everytime we use OpenLANE. This is done by using the following script:
-    
-    docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6
+
+PDKs as stressed earlier are essential as they contain technology ```lef``` files that are used to harden macros for obtaining the GDSII file which is a binary file format representing planar geometric shapes, text labels, and other information about the layout in hierarchical form. The Skywawter 130 nm pdks contains there strutured files in three folders mainly ```Sky130A```, ```open_pdks``` and ```skywater pdks```.
+
+   <img src="images/Day1/day01_01_pdks.png">
+
+Apart from the pdks the other essential folder that includes all of the tools that have been installed into a docker environment have been include in the openlane folder that contains the scripts to intialize the openlane flow. The ```flow.tcl``` contains scripts to intialize the tools, ```designs``` folder that contains the verilog IPs and configuration files for each of the project. The runs related information and reports with logs are contained in all of these project folders. At each of the runs the date is attributed as the run folder with the report all being automated with the help of the commands being automamted through openlane.
+
+   <img src="images/Day1/day01_02_tools.png">
+   <img src="images/Day1/day01_03_libfiles.png">
    
-   A custom shell script or commands can be generated to make the task simpler.
+For invoking OpenLANE in Linux Ubuntu, we should first run the docker everytime we use OpenLANE. This is done by using the following script:
+    
+    $ docker (or)
+    $ docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6
+   
+A custom shell script or commands can be generated to make the task simpler.
    
    - To invoke OpenLANE run the `./flow.tcl` script.
    - OpenLANE supports two modes of operation: interactive and autonomous.
    - To use interactive mode use `-interactive` flag with `./flow.tcl`
 
-
-   <img src="images/Day1/day01_01_pdks.png">
-   <img src="images/Day1/day01_02_tools.png">
-   <img src="images/Day1/day01_03_libfiles.png">
+   
    <img src="images/Day1/day01_04_openlanedocker.png">
    <img src="images/Day1/day01_05_configfile.png">
    <img src="images/Day1/day01_06_fileprep.png">
