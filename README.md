@@ -44,7 +44,9 @@ Listed in details are the tools that are included in the OpenLane flow that incl
   8. Checks
       1. `Magic` - Performs design rule check (DRC) checks & Antenna Checks (antenna are due to 
       2. `Netgen` - Performs LVS Checks
-      
+
+# OpenSource Tools for RTL to GDSII Flow
+
 OpenLANE integrated several key open source tools over the execution stages:
   - RTL Synthesis, Technology Mapping, and Formal Verification : [yosys + abc](https://github.com/YosysHQ/yosys)
   - Static Timing Analysis: [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA)
