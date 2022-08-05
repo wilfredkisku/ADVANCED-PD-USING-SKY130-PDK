@@ -8,7 +8,11 @@
     - [OpenROAD flow](#openroad-flow)
     - [OpenSource Tools for RTL to GDSII Flow](#opensource-tools-for-rtl-to-gdsii-flow)
     - [Tools Usage](#tool-usage) 
-
+  - [Day 2](#day-1)
+    - [Lesson 1](#lesson-1)
+    - [Lesson 2](#lesson-2)
+    - [Lesson 3](#lesson-3)
+    
 # Day 1 
 # OpenROAD flow
 
@@ -89,3 +93,10 @@ A custom shell script or commands can be generated to make the task simpler.
    <img src="images/Day1/day01_05_configfile.png">
    <img src="images/Day1/day01_06_fileprep.png">
    <img src="images/Day1/day01_07_flopratio.png">
+
+# Day 2
+# Lesson 1
+
+# Lesson 2
+
+# Lesson 3
