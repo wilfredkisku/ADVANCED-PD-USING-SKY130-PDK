@@ -43,3 +43,18 @@ Listed in details are the tools that are included in the OpenLane flow that incl
   8. Checks
       1. `Magic` - Performs design rule check (DRC) checks & Antenna Checks (antenna are due to 
       2. `Netgen` - Performs LVS Checks
+      
+OpenLANE integrated several key open source tools over the execution stages:
+  - RTL Synthesis, Technology Mapping, and Formal Verification : [yosys + abc](https://github.com/YosysHQ/yosys)
+  - Static Timing Analysis: [OpenSTA](https://github.com/The-OpenROAD-Project/OpenSTA)
+  - Floor Planning: [init_fp], [ioPlacer], [pdn] and [tapcell]
+  - Placement: [RePLace] (Global), [Resizer] and [OpenPhySyn] (Optimizations), and [OpenDP] (Detailed)
+  - Clock Tree Synthesis: [TritonCTS]
+  - Fill Insertion: [OpenDP/filler_placement]
+  - Routing: [FastRoute] (Global) and [TritonRoute] (Detailed)
+  - SPEF Extraction: [SPEF-Extractor]
+  - GDSII Streaming out: [Magic](https://github.com/RTimothyEdwards/magic)
+  - DRC Checks: [Magic](https://github.com/RTimothyEdwards/magic)
+  - LVS check: [Netgen](https://github.com/RTimothyEdwards/netgen)
+  - Antenna Checks: [Magic](https://github.com/RTimothyEdwards/magic)
+  - Circuit Validity Checker: [CVC](https://github.com/d-m-bailey/cvc)
