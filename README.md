@@ -4,11 +4,12 @@
 
 
 # Content
-  - [OpenROAD flow](#openroad-flow)
-  - [OpenSource Tools for RTL to GDSII Flow](#opensource-tools-for-rtl-to-gdsii-flow)
-  -   
+  - [Day 1](#day-1)
+    - [OpenROAD flow](#openroad-flow)
+    - [OpenSource Tools for RTL to GDSII Flow](#opensource-tools-for-rtl-to-gdsii-flow)
+    - [Tools Usage ]  
 
-
+# Day 1 
 # OpenROAD flow
 
   Automating the process of RTL to GDSII is a the complete design flow from the designing of RTL using HDL languages such as ```verilog``` and ```VHDL``` or higher level abstration languages such as ```SystemC```, ```High-Level-Sysnthesis``` (HLS). There are newer abstraction for designing RTL such as ```BlueSpec Verilog```  and ```BlueSpec Haskell```.  The complete steps for in sequence can be listed using the openlane flow diagram as show below.
@@ -58,3 +59,7 @@ OpenLANE integrated several key open source tools over the execution stages:
   - LVS check: [Netgen](https://github.com/RTimothyEdwards/netgen)
   - Antenna Checks: [Magic](https://github.com/RTimothyEdwards/magic)
   - Circuit Validity Checker: [CVC](https://github.com/d-m-bailey/cvc)
+
+   <img src="images/d2_floorplan_invoke_magic_cmd.JPG">
+   <img src="images/d2_floorplan_magic.JPG">
+   <img src="images/d2_floorplan_magic_expand.JPG">
