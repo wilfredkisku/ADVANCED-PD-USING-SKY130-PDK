@@ -63,7 +63,7 @@ OpenLANE integrated several key open source tools over the execution stages:
    <img src="images/Day1/day01_01_pdks.png">
    <img src="images/Day1/day01_02_tools.png">
    <img src="images/Day1/day01_03_libfiles.png">
-   <img src="images/Day1/day01_01_openlanedocker.png">
-   <img src="images/Day1/day01_01_configfile.png">
-   <img src="images/Day1/day01_01_fileprep.png">
-   <img src="images/Day1/day01_01_flopratio.png">
+   <img src="images/Day1/day01_04_openlanedocker.png">
+   <img src="images/Day1/day01_05_configfile.png">
+   <img src="images/Day1/day01_06_fileprep.png">
+   <img src="images/Day1/day01_07_flopratio.png">
