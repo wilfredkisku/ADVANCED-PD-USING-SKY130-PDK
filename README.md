@@ -232,7 +232,7 @@ The standard cell such as an inverter can be said tot be a buidling block of a c
 
 Now fast forwarding into the designed file which is the inverter, and its layout with the complete layout definition inbuilt into the ```sky130_inv.mag``` that is provided as part of the workshop but can also be designed using the layout tool with the process parameters in the spice model file. Just need to download the ```vsdstdcelldesign``` repository from GitHub to the openlane directory using the ```git clone``` command in the linux based system and then using the ```mag``` file to be opened using the magic tool with the def and lef switches on the terminal.
 
-    $ https://github.com/nickson-jose/vsdstdcelldesign.git
+    https://github.com/nickson-jose/vsdstdcelldesign.git
 
    <img src="images/Day3/day03_1.png">
    <img src="images/Day3/day03_2.png">
