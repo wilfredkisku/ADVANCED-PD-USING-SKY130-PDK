@@ -18,6 +18,9 @@
     - [Inverter Layout in different graphics using Magic](#inverter-layout-in-different-graphics-using-magic)
     - [Extracted Spice Deck](#extracted-spice-deck)
     - [Calcuations for rise, fall and delay time units](#calcuations-for-rise-fall-and-delay-time-units)
+
+  - [Day 4](#day-4)
+    - [Generated LEF file](#generated-lef-file)
     
 # Day 1 
 # OpenROAD flow
@@ -287,3 +290,73 @@ $\text{Rise time} = 2.246 ns - 2.182 ns = 0.064 ns$
 $\text{Fall time} = 4.095 ns - 4.053 ns = 0.042 ns$
 
 $\text{Delay} = 2.21 ns - 2.15 ns = 0.06 ns$
+
+
+# Day 4
+
+# Generated LEF file
+
+      VERSION 5.7 ;
+        NOWIREEXTENSIONATPIN ON ;
+        DIVIDERCHAR "/" ;
+        BUSBITCHARS "[]" ;
+      MACRO sky130_inv
+        CLASS CORE ;
+        FOREIGN sky130_inv ;
+        ORIGIN 0.000 0.000 ;
+        SIZE 1.380 BY 2.720 ;
+        SITE unithd ;
+        PIN A
+          ANTENNAGATEAREA 0.165600 ;
+          PORT
+            LAYER li1 ;
+              RECT 0.060 1.180 0.510 1.690 ;
+          END
+        END A
+        PIN Y
+          DIRECTION OUTPUT ;
+          USE SIGNAL ;
+          ANTENNADIFFAREA 0.287800 ;
+          PORT
+            LAYER li1 ;
+              RECT 0.760 1.960 1.100 2.330 ;
+              RECT 0.880 1.690 1.050 1.960 ;
+              RECT 0.880 1.180 1.330 1.690 ;
+              RECT 0.880 0.760 1.050 1.180 ;
+              RECT 0.780 0.410 1.130 0.760 ;
+          END
+        END A
+        PIN VPWR
+          DIRECTION INPUT ;
+          USE POWER ;
+          PORT
+            LAYER nwell ;
+              RECT -0.200 1.140 1.570 3.040 ;
+            LAYER li1 ;
+              RECT -0.200 2.580 1.430 2.900 ;
+              RECT 0.180 2.330 0.350 2.580 ;
+              RECT 0.100 1.970 0.440 2.330 ;
+            LAYER mcon ;
+              RECT 0.230 2.640 0.400 2.810 ;
+              RECT 1.000 2.650 1.170 2.820 ;
+            LAYER met1 ;
+              RECT -0.200 2.480 1.570 2.960 ;
+          END
+        END VPWR
+        PIN VGND
+          DIRECTION INPUT ;
+          USE GROUND ;
+          PORT
+            LAYER li1 ;
+              RECT 0.100 0.410 0.450 0.760 ;
+              RECT 0.150 0.210 0.380 0.410 ;
+              RECT 0.000 -0.150 1.460 0.210 ;
+            LAYER mcon ;
+              RECT 0.210 -0.090 0.380 0.080 ;
+              RECT 1.050 -0.090 1.220 0.080 ;
+            LAYER met1 ;
+              RECT -0.110 -0.240 1.570 0.240 ;
+          END
+        END VGND
+      END sky130_inv
+      END LIBRARY
