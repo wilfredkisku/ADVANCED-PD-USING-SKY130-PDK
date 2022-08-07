@@ -16,6 +16,7 @@
     - [Custom layout design and simulation of a inverter insertion using tools](#custom-layout-design-and-simulation-of-a-inverter-insertion-using-tools)
     - [Extract the spice netlist](#extract-the-spice-netlist)
     - [Inverter Layout in different graphics using Magic](#inverter-layout-in-different-graphics-using-magic)
+    - [Extracted Spice Deck](#extracted-spice-deck)
     - [Calcuations for rise, fall and delay time units](#calcuations-for-rise-fall-and-delay-time-units)
     
 # Day 1 
@@ -264,7 +265,14 @@ Update the ```sky130_inv.spice``` file has been extracted and needs to be change
    <img src="images/Day3/day03_8.png">
    <img src="images/Day3/day03_11.png">
    <img src="images/Day3/day03_12.png">
+   
+    ngspice sky130_inv.spice
+    -> plot y vs time a
+   
    <img src="images/Day3/day03_13.png">
+   
+ The digrams below show the channges made by using a load cap of ```2.0fF``` and then plotting the transient response of the inverter circuit for ```3.3V```. This would help us to get the circuit response and help us to calculate the various parameters such as fall time, rise time and delays associated. The delay of the inveter can conceptually help us to find the operating frequency of the digital logic that has been designed. 
+   
    <img src="images/Day3/day03_14.png">
    <img src="images/Day3/day03_16.png"> 
 
