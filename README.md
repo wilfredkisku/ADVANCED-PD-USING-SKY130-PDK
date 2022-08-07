@@ -296,6 +296,12 @@ $\text{Delay} = 2.21 ns - 2.15 ns = 0.06 ns$
 
 # Generated LEF file
 
+The sequence in which the lef file needs to be generated is shows pictorially through the screenshots:
+  - Obtain the track information through the skywater 130 nm porcess inside the ```tracks.info``` files.
+  - Open the ```sky130_inv.mag``` file and edit the information for each of the pins defined as ```A```, ```Y```, ```VPWR``` and ```VGND```.
+  - the definitions are ```locali``` and ```metal1``` for the respective ports.
+  - The grid can be defined with respect to the track info using the grid command.
+  
    <img src="images/Day4/day04_1.png">
    <img src="images/Day4/day04_2.png">
    <img src="images/Day4/day04_3.png">
