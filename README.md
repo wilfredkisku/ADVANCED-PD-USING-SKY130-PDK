@@ -221,11 +221,8 @@ The ```picorv32a.floorplan.def``` contains the numeric values of the placed info
     [...]
  
  $\text{Die Area} = \text{width} \times \text{height}$
+ 
  $\text{Die Area} = 660.69\mu \times 671.41\mu$
-
-
-# Lesson 3
-
 
 # Day 3
 # Custom layout design and simulation of a inverter insertion using tools 
