@@ -202,7 +202,28 @@ To place the standard cells run the command on the openlane flow console:
    
    <img src="images/Day2/day02_12.png">
    <img src="images/Day2/day02_13.png">
-   
+
+The ```picorv32a.floorplan.def``` contains the numeric values of the placed information of the entire layout in terms of the cell.
+
+    VERSION 5.8 ;
+    DIVIDERCHAR "/" ;
+    BUSBITCHARS "[]" ;
+    DESIGN picorv32a ;
+    UNITS DISTANCE MICRONS 1000 ;
+    DIEAREA ( 0 0 ) ( 660685 671405 ) ;
+    ROW ROW_0 unithd 5520 10880 FS DO 1412 BY 1 STEP 460 0 ;
+    ROW ROW_1 unithd 5520 13600 N DO 1412 BY 1 STEP 460 0 ;
+    ROW ROW_2 unithd 5520 16320 FS DO 1412 BY 1 STEP 460 0 ;
+    ROW ROW_3 unithd 5520 19040 N DO 1412 BY 1 STEP 460 0 ;
+    ROW ROW_4 unithd 5520 21760 FS DO 1412 BY 1 STEP 460 0 ;
+    ROW ROW_5 unithd 5520 24480 N DO 1412 BY 1 STEP 460 0 ;
+    ROW ROW_6 unithd 5520 27200 FS DO 1412 BY 1 STEP 460 0 ;
+    [...]
+ 
+ $\text{Die Area} = \text{width} \times \text{height}$
+ $\text{Die Area} = 660.69\mu \times 671.41\mu$
+
+
 # Lesson 3
 
 
