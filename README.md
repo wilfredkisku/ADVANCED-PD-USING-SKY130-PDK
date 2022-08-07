@@ -306,7 +306,6 @@ $\text{Delay} = 2.21 ns - 2.15 ns = 0.06 ns$
    <img src="images/Day4/day04_8.png">
    <img src="images/Day4/day04_9.png">
    <img src="images/Day4/day04_10.png">
-   <img src="images/Day4/day04_11.png">
 
       VERSION 5.7 ;
         NOWIREEXTENSIONATPIN ON ;
