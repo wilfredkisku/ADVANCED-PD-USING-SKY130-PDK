@@ -15,6 +15,7 @@
   - [Day 3](#day-3)
     - [Custom layout design and simulation of a inverter insertion using tools](#custom-layout-design-and-simulation-of-a-inverter-insertion-using-tools)
     - [Extract the spice netlist](#extract-the-spice-netlist)
+    - [Inverter Layout in different graphics using Magic](#inverter-layout-in-different-graphics-using-magic)
     - [Calcuations for rise, fall and delay time units](#calcuations-for-rise-fall-and-delay-time-units)
     
 # Day 1 
@@ -255,16 +256,16 @@ To extract a spice netlist, then the parasitic capacitance and resistance.
 Run magic using ```magic -d XR -T sky130A.tech sky130_inv.mag &```. The ```-d XR``` option or switch is used to set a different graphics system and produces a clearer window.
 
    <img src="images/Day3/day03_6.png">
+   
+# Extracted Spice Deck
+Update the ```sky130_inv.spice``` file has been extracted and needs to be changed with correct scaling factor and models. The scale is changed from ```1000u``` to ```0.01u``` using the ```.option scale =0.01u``` in the file.
+
    <img src="images/Day3/day03_7.png">
    <img src="images/Day3/day03_8.png">
-   <img src="images/Day3/day03_9.png">
-   <img src="images/Day3/day03_10.png">
    <img src="images/Day3/day03_11.png">
    <img src="images/Day3/day03_12.png">
    <img src="images/Day3/day03_13.png">
    <img src="images/Day3/day03_14.png">
-   <img src="images/Day3/day03_15.png">
-   <img src="images/Day3/day03_16.png">
    <img src="images/Day3/day03_16.png"> 
 
 # Calcuations for rise, fall and delay time units
