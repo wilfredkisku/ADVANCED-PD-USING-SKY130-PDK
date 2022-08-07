@@ -22,6 +22,7 @@
   - [Day 4](#day-4)
     - [Prepare MAG file](#prepare-mag-file)
     - [Generate LEF file](#generate-lef-file)
+    - [Running the floorplan](#running-the-floorplan)
     
 # Day 1 
 # OpenROAD flow
@@ -393,6 +394,20 @@ The LEF file can be created through the magicc console using the ```lef write```
    <img src="images/Day4/day04_12.png">
    <img src="images/Day4/day04_13.png">
    <img src="images/Day4/day04_14.png">
+   
+# Running the floorplan
+
+Since in the newer version of the openlane tool the command ```run_floorplan``` fails, we can use the following procedure as was mentioned earler to manually/interactively create the floorplan.
+
+    init_floorplan
+    place_io
+    global_placement_or
+    detailed_placement
+    tap_decap_or
+    detailed_placement
+    gen_pdn
+    run_routing
+   
    <img src="images/Day4/day04_15.png">
    <img src="images/Day4/day04_16.png">
    <img src="images/Day4/day04_17.png">
