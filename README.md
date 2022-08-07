@@ -163,7 +163,7 @@ The details of the configuration variable are located in '/home/kisku.1/Desktop/
 
    <img src="images/Day2/day02_1.png">
    <img src="images/Day2/day02_2.png">
-   <img src="images/Day2/day01_3.png">
+   <img src="images/Day2/day02_3.png">
    <img src="images/Day2/day02_4.png">
    <img src="images/Day2/day02_5.png">
    <img src="images/Day2/day02_6.png">
