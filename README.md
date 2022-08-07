@@ -23,6 +23,7 @@
     - [Prepare MAG file](#prepare-mag-file)
     - [Generate LEF file](#generate-lef-file)
     - [Running the floorplan](#running-the-floorplan)
+    - [Visualize the layout with magic](#visualize-the-layout-with-magic)
     
 # Day 1 
 # OpenROAD flow
@@ -414,7 +415,8 @@ Since in the newer version of the openlane tool the command ```run_floorplan``` 
    <img src="images/Day4/day04_18.png">
    <img src="images/Day4/day04_19.png">
 
-    magic -d XR -T /home/kisku.1/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/kisku.1/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/7-08_06-47/tmp/merged.lef def read /home/kisku.1/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/7-08_06-47/results/placement/picorv32a.placement.def &
+# Visualize the layout with magic
+    magic -d XR -T /home/kisku.1/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read /home/kisku.1/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/7-08_20-47/tmp/merged.lef def read /home/kisku.1/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/7-08_20-47/results/placement/picorv32a.placement.def &
    
    <img src="images/Day4/day04_20.png">
    <img src="images/Day4/day04_21.png">
