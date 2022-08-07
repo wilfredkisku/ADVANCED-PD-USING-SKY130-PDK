@@ -161,19 +161,19 @@ The details of the configuration variable are located in '/home/kisku.1/Desktop/
     | `SYNTH_USE_PG_PINS_DEFINES` | Specifies the power guard used in the verilog source code to specify the power and ground pins. This is used to automatically extract `VDD_NETS` and `GND_NET` variables from the verilog, with the assumption that they will be order `inout vdd1, inout gnd1, inout vdd2, inout gnd2, ...`. |
 # Lesson 2
 
-   <img src="images/Day2/Day02_1.png">
+   <img src="images/Day2/day02_1.png">
    <img src="images/Day2/day02_2.png">
    <img src="images/Day2/day01_3.png">
-   <img src="images/Day2/Day02_4.png">
-   <img src="images/Day2/Day02_5.png">
-   <img src="images/Day2/Day02_6.png">
-   <img src="images/Day2/Day02_7.png">
-   <img src="images/Day2/Day02_8.png">
-   <img src="images/Day2/Day02_9.png">
-   <img src="images/Day2/Day02_10.png">
-   <img src="images/Day2/Day02_11.png">
-   <img src="images/Day2/Day02_12.png">
-   <img src="images/Day2/Day02_13.png">
+   <img src="images/Day2/day02_4.png">
+   <img src="images/Day2/day02_5.png">
+   <img src="images/Day2/day02_6.png">
+   <img src="images/Day2/day02_7.png">
+   <img src="images/Day2/day02_8.png">
+   <img src="images/Day2/day02_9.png">
+   <img src="images/Day2/day02_10.png">
+   <img src="images/Day2/day02_11.png">
+   <img src="images/Day2/day02_12.png">
+   <img src="images/Day2/day02_13.png">
    
 # Lesson 3
 
@@ -181,20 +181,20 @@ The details of the configuration variable are located in '/home/kisku.1/Desktop/
 # Day 3
 # Custom layout design and simulation of a inverter insertion using tools 
 
-   <img src="images/Day3/Day03_1.png">
-   <img src="images/Day3/Day03_2.png">
-   <img src="images/Day3/Day03_3.png">
-   <img src="images/Day3/Day03_4.png">
-   <img src="images/Day3/Day03_5.png">
-   <img src="images/Day3/Day03_6.png">
-   <img src="images/Day3/Day03_7.png">
-   <img src="images/Day3/Day03_8.png">
-   <img src="images/Day3/Day03_9.png">
-   <img src="images/Day3/Day03_10.png">
-   <img src="images/Day3/Day03_11.png">
-   <img src="images/Day3/Day03_12.png">
-   <img src="images/Day3/Day03_13.png">
-   <img src="images/Day3/Day03_14.png">
-   <img src="images/Day3/Day03_15.png">
-   <img src="images/Day3/Day03_16.png">
-   <img src="images/Day3/Day03_16.png"> 
+   <img src="images/Day3/day03_1.png">
+   <img src="images/Day3/day03_2.png">
+   <img src="images/Day3/day03_3.png">
+   <img src="images/Day3/day03_4.png">
+   <img src="images/Day3/day03_5.png">
+   <img src="images/Day3/day03_6.png">
+   <img src="images/Day3/day03_7.png">
+   <img src="images/Day3/day03_8.png">
+   <img src="images/Day3/day03_9.png">
+   <img src="images/Day3/day03_10.png">
+   <img src="images/Day3/day03_11.png">
+   <img src="images/Day3/day03_12.png">
+   <img src="images/Day3/day03_13.png">
+   <img src="images/Day3/day03_14.png">
+   <img src="images/Day3/day03_15.png">
+   <img src="images/Day3/day03_16.png">
+   <img src="images/Day3/day03_16.png"> 
