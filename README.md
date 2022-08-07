@@ -9,7 +9,7 @@
     - [OpenSource Tools for RTL to GDSII Flow](#opensource-tools-for-rtl-to-gdsii-flow)
     - [Tools Usage](#tool-usage) 
   - [Day 2](#day-1)
-    - [Lesson 1](#lesson-1)
+    - [Floorplanning, power planning and pin placement](#floorplanning-power-planning-and-pin-placement)
     - [Lesson 2](#lesson-2)
     - [Lesson 3](#lesson-3)
     
@@ -103,8 +103,60 @@ $\text{Flops to Cell ratio} = \frac{\text{Number of FFs}}{\text{Number of Cells}
 $\text{Flops to Cell ratio} = \frac{\text{1613}}{\text{14876}} = 0.1084 \text{(or)} 10.84\text{\%}$
 
 # Day 2
-# Lesson 1
+# Floorplanning, power planning and pin placement
 
+The layout is the necessary step to get a hardened macros and the GDSII file that needs to be sent to the foundry. This requires steps that are to be run is a particular order for getting the final file of masks that are stacked in a certain order with layers of metals, defining the area the devices that take place on the slicon wafer.
+
+The tools are all inbuilt in the openlane flow and are to be run after synthesis ```run_synthesis```, the step that carries out the floorplanning is where the arrangement of logical block, library cells, pins are defined on wafer or chip. This step makes sure that the synthesized modeules has been assigned an appropriate area and aspect ratio. The pins are too assigned a definite interface that the users of the chip would like to interact with it as a complete sytem is created such as shown in the arduino board as an example. 
+
+
+    run_floorplan
+
+The details of the configuration variable are located in '/home/kisku.1/Desktop/work/tools/openlane_working_dir/openlane/configuration/README.md‌‌', these also has various ```switches``` for completing a user configured layout and floorplanning.  `FP_IO_HMETAL` and  `FP_IO_VMETAL` which defines the different metal layers assigned which are shown in the final runs as ```+1``` after the successful run. The complete floorplanning section is shown in the below.
+
+    ### Floorplanning
+
+    | Variable      | Description                                                   |
+    |---------------|---------------------------------------------------------------|
+    | `FP_CORE_UTIL`  | The core utilization percentage. <br> (Default: `50` percent)|
+    | `FP_ASPECT_RATIO`  | The core's aspect ratio (height / width). <br> (Default: `1`)|
+    | `FP_SIZING`  | Whether to use relative sizing by making use of `FP_CORE_UTIL` or absolute one using `DIE_AREA`. <br> (Default: `"relative"` - accepts "absolute" as well)|
+    | `DIE_AREA`  | Specific die area to be used in floorplanning. Specified as a 4-corner rectangle. Units in mm <br> (Default: unset)|
+    | `FP_IO_HMETAL`  | The metal layer on which to place the io pins horizontally (top and bottom of the die). <br>(Default: `4`)|
+    | `FP_IO_VMETAL`  | The metal layer on which to place the io pins vertically (sides of the die) <br> (Default: `3`)|
+    | `FP_IO_MODE`  | Decides the mode of the random IO placement option. 0=matching mode, 1=random equidistant mode <br> (Default: `1`)|
+    | `FP_WELLTAP_CELL`  | The name of the welltap cell during welltap insertion. |
+    | `FP_ENDCAP_CELL`  | The name of the endcap cell during endcap insertion. |
+    | `FP_PDN_VOFFSET`  | The offset of the vertical power stripes on the metal layer 4 in the power distribution network <br> (Default: `16.32`) |
+    | `FP_PDN_VPITCH`  | The pitch of the vertical power stripes on the metal layer 4 in the power distribution network <br> (Default: `153.6`) |
+    | `FP_PDN_HOFFSET`  | The offset of the horizontal power stripes on the metal layer 5 in the power distribution network <br> (Default: `16.65`) |
+    | `FP_PDN_HPITCH`  | The pitch of the horizontal power stripes on the metal layer 5 in the power distribution network <br> (Default: `153.18`) |
+    | `FP_PDN_AUTO_ADJUST` | Decides whether or not the flow should attempt to re-adjust the power grid, in order for it to fit inside the core area of the design, if needed. <br> 1=enabled, 0 =disabled (Def
+    ault: `1`) |
+    | `FP_TAPCELL_DIST`  | The horizontal distance between two tapcell columns <br> (Default: `14`) |
+    | `FP_IO_VEXTEND`  |  Extends the vertical io pins outside of the die by the specified units<br> (Default: `-1` Disabled) |
+    | `FP_IO_HEXTEND`  |  Extends the horizontal io pins outside of the die by the specified units<br> (Default: `-1` Disabled) |
+    | `FP_IO_VLENGTH`  | The length of the vertical IOs in microns. <br> (Default: `4`) |
+    | `FP_IO_HLENGTH`  | The length of the horizontal IOs in microns. <br> (Default: `4`) |
+    | `FP_IO_VTHICKNESS_MULT`  | A multiplier for vertical pin thickness. Base thickness is the pins layer minwidth <br> (Default: `2`) |
+    | `FP_IO_HTHICKNESS_MULT`  | A multiplier for horizontal pin thickness. Base thickness is the pins layer minwidth <br> (Default: `2`) |
+    | `BOTTOM_MARGIN_MULT`     | The core margin, in multiples of site heights, from the bottom boundary. <br> (Default: `4`) |
+    | `TOP_MARGIN_MULT`        | The core margin, in multiples of site heights, from the top boundary. <br> (Default: `4`) |
+    | `LEFT_MARGIN_MULT`       | The core margin, in multiples of site widths, from the left boundary.  <br> (Default: `12`) |
+    | `RIGHT_MARGIN_MULT`      | The core margin, in multiples of site widths, from the right boundary.   <br> (Default: `12`) |
+    | `FP_PDN_CORE_RING` | Enables adding a core ring around the design. More details on the control variables in the pdk configurations documentation. 0=Disable 1=Enable. <br> (Default: `0`) |
+    | `FP_PDN_ENABLE_RAILS` | Enables the creation of rails in the power grid. 0=Disable 1=Enable. <br> (Default: `1`) |
+    | `FP_PDN_CHECK_NODES` | Enables checking for unconnected nodes in the power grid. 0=Disable 1=Enable. <br> (Default: `1`) |
+    | `FP_HORIZONTAL_HALO` | Sets the horizontal halo around the tap and decap cells. The value provided is in microns. <br> Default: `10` |
+    | `FP_VERTICAL_HALO` | Sets the vertical halo around the tap and decap cells. The value provided is in microns. <br> Default: set to the value of `FP_HORIZONTAL_HALO` |
+    | `DESIGN_IS_CORE` | Controls the layers used in the power grid. Depending on whether the design is the core of the chip or a macro inside the core. 1=Is a Core, 0=Is a Macro <br> (Default: `1`)|
+    | `FP_PIN_ORDER_CFG` | Points to the pin order configuration file to set the pins in specific directions (S, W, E, N). Check this [file][0] as an example. If not set, then the IO pins will be placed based on one of the other methods depending on the rest of the configurations. <br> (Default: NONE)|
+    | `FP_CONTEXT_DEF` | Points to the parent DEF file that includes this macro/design and uses this DEF file to determine the best locations for the pins. It must be used with `FP_CONTEXT_LEF`, otherwise it's considered non-existing. If not set, then the IO pins will be placed based on one of the other methods depending on the rest of the configurations. <br> (Default: NONE)|
+    | `FP_CONTEXT_LEF` | Points to the parent LEF file that includes this macro/design and uses this LEF file to determine the best locations for the pins. It must be used with `FP_CONTEXT_DEF`, otherwise it's considered non-existing. If not set, then the IO pins will be placed based on one of the other methods depending on the rest of the configurations. <br> (Default: NONE)|
+    | `FP_DEF_TEMPLATE` | Points to the DEF file to be used as a template when running `apply_def_template`. This will be used to exctract pin names, locations, shapes -excluding power and ground pins- as well as the die area and replicate all this information in the `CURRENT_DEF`. |
+    | `VDD_NETS` | Specifies the power nets/pins to be used when creating the power grid for the design. |
+    | `GND_NETS` | Specifies the ground nets/pins to be used when creating the power grid for the design. |
+    | `SYNTH_USE_PG_PINS_DEFINES` | Specifies the power guard used in the verilog source code to specify the power and ground pins. This is used to automatically extract `VDD_NETS` and `GND_NET` variables from the verilog, with the assumption that they will be order `inout vdd1, inout gnd1, inout vdd2, inout gnd2, ...`. |
 # Lesson 2
 
 # Lesson 3
