@@ -226,6 +226,13 @@ The ```picorv32a.floorplan.def``` contains the numeric values of the placed info
 
 # Day 3
 # Custom layout design and simulation of a inverter insertion using tools 
+# CMOS Inverter Standard Cell
+
+The standard cell such as an inverter can be said tot be a buidling block of a complex vsli chip or design, it can be used as a buffer, an inverter (or not gate), and its extension can be used to build complementary logic such as NAND, NOR gates that in extersion are all that we need for a fully functional chip in the basic level. To learn to desing our own cell that can be characterized and customized for foundry parameters such as $V_t_0$ and doping concentration profile. We need to assiciate with the foundry spice ```model``` files. These files contain in intricate detail the device level profiles that are basically the physics that are inbuilt into the device, in this case the inverter. All of which are built using the PMOS and NMOS devices grown on the silicon wafer. 
+
+Now fast forwarding into the designed file which is the inverter, and its layout with the complete layout definition inbuilt into the ```sky130_inv.mag``` that is provided as part of the workshop but can also be designed using the layout tool with the process parameters in the spice model file. Just need to download the ```vsdstdcelldesign``` repository from GitHub to the openlane directory using the ```git clone``` command in the linux based system and then using the ```mag``` file to be opened using the magic tool with the def and lef switches on the terminal.
+
+    $ https://github.com/nickson-jose/vsdstdcelldesign.git
 
    <img src="images/Day3/day03_1.png">
    <img src="images/Day3/day03_2.png">
