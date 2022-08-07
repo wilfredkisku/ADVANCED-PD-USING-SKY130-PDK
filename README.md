@@ -159,7 +159,22 @@ The details of the configuration variable are located in '/home/kisku.1/Desktop/
     | `VDD_NETS` | Specifies the power nets/pins to be used when creating the power grid for the design. |
     | `GND_NETS` | Specifies the ground nets/pins to be used when creating the power grid for the design. |
     | `SYNTH_USE_PG_PINS_DEFINES` | Specifies the power guard used in the verilog source code to specify the power and ground pins. This is used to automatically extract `VDD_NETS` and `GND_NET` variables from the verilog, with the assumption that they will be order `inout vdd1, inout gnd1, inout vdd2, inout gnd2, ...`. |
-# Lesson 2
+# Synthesis and Floorplanning runs and new version of OpenLANE 
+
+- In the newer version fo the openlane FP_CORE_VMETAL and FP_CORE_HMETAL switches are missing in ```ioPlacer.log``` and ```config.tcl```. They need to be included in the ```config.tcl``` file before running the floorplanning as it defines the complete layer number definitions.
+- ```run_floorplan``` fails after the STA analysis in the new version. An alternate command can be used: ```init_floorplan```
+- SPEF extraction need not be externally performed in the new version. It has been integrated into the OpenLane flow.
+
+Note in the new version following commans may be used for an error free flow:
+
+    % init_floorplan
+    % place_io
+    % global_placement_or
+    % detailed_placement
+    % tap_decap_or
+    % detailed_placement
+    % gen_pdn
+    % run_routing
 
    <img src="images/Day2/day02_1.png">
    <img src="images/Day2/day02_2.png">
