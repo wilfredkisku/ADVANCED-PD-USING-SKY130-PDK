@@ -330,7 +330,7 @@ The LEF file can be created through the magicc console using the ```lef write```
         BUSBITCHARS "[]" ;
       MACRO sky130_inv
         CLASS CORE ;
-        FOREIGN sky130_inv ;
+        FOREIGN sky130_inv_kisku ;
         ORIGIN 0.000 0.000 ;
         SIZE 1.380 BY 2.720 ;
         SITE unithd ;
@@ -386,5 +386,18 @@ The LEF file can be created through the magicc console using the ```lef write```
               RECT -0.110 -0.240 1.570 0.240 ;
           END
         END VGND
-      END sky130_inv
+      END sky130_inv_kisku
       END LIBRARY
+      
+
+   <img src="images/Day4/day04_12.png">
+   <img src="images/Day4/day04_13.png">
+   <img src="images/Day4/day04_14.png">
+   <img src="images/Day4/day04_15.png">
+   <img src="images/Day4/day04_16.png">
+   <img src="images/Day4/day04_17.png">
+   <img src="images/Day4/day04_18.png">
+   <img src="images/Day4/day04_19.png">
+   <img src="images/Day4/day04_20.png">
+   <img src="images/Day4/day04_21.png">
+   <img src="images/Day4/day04_22.png">
