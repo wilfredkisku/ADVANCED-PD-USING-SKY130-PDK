@@ -11,7 +11,7 @@
   - [Day 2](#day-2)
     - [Floorplanning, power planning and pin placement](#floorplanning-power-planning-and-pin-placement)
     - [Synthesis and Floorplanning runs and new version of OpenLANE](#synthesis-and-floorplanning-runs-and-new-version-of-openlane)
-    - [Lesson 3](#lesson-3)
+    - [Placement command and magic tool to display](#placement-command-and-magic-tool-to-display)
   - [Day 3](#day-3)
     - [Custom layout design and simulation of a inverter insertion using tools](#custom-layout-design-and-simulation-of-a-inverter-insertion-using-tools)
     
@@ -187,13 +187,19 @@ DEF file is used to represent the Physical layout of an Integrated Circuit (IC) 
 
 Library Exchange Format is a specification for representing the physical layout of an integrated circuit in an ASCII format. It includes design rules and abstract information about the cells. LEF only has the basic information required at that level to serve the purpose of the concerned CAD tool, in this case the magic layout and openlane tools.
 
-   magic -T <path-to-tech-file-skywater-130A> def read <path-to-the-def-file> lef read <path-to-the-generated-lef-file-after-floorplan>
+    magic -T <path-to-tech-file-skywater-130A> def read <path-to-the-def-file> lef read <path-to-the-generated-lef-file-after-floorplan>
 
    <img src="images/Day2/day02_7.png">
    <img src="images/Day2/day02_8.png">
    <img src="images/Day2/day02_9.png">
    <img src="images/Day2/day02_10.png">
    <img src="images/Day2/day02_11.png">
+   
+# Placement command and magic tool to display
+To place the standard cells run the command on the openlane flow console:
+
+    % run_placement
+   
    <img src="images/Day2/day02_12.png">
    <img src="images/Day2/day02_13.png">
    
