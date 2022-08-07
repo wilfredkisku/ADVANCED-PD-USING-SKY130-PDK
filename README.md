@@ -159,4 +159,21 @@ The details of the configuration variable are located in '/home/kisku.1/Desktop/
     | `SYNTH_USE_PG_PINS_DEFINES` | Specifies the power guard used in the verilog source code to specify the power and ground pins. This is used to automatically extract `VDD_NETS` and `GND_NET` variables from the verilog, with the assumption that they will be order `inout vdd1, inout gnd1, inout vdd2, inout gnd2, ...`. |
 # Lesson 2
 
+   <img src="images/Day2/Day02_06_fileprep.png">
+   <img src="images/Day2/day01_07_flopratio.png">
+   <img src="images/Day2/day01_06_fileprep.png">
+   <img src="images/Day2/day01_07_flopratio.png">
+   <img src="images/Day2/day01_06_fileprep.png">
+   <img src="images/Day2/day01_07_flopratio.png">
+   <img src="images/Day2/day01_06_fileprep.png">
+   <img src="images/Day2/day01_07_flopratio.png">
+   <img src="images/Day2/day01_06_fileprep.png">
+   <img src="images/Day2/day01_07_flopratio.png">
+   <img src="images/Day2/day01_06_fileprep.png">
+   <img src="images/Day2/day01_07_flopratio.png">
+   <img src="images/Day2/day01_06_fileprep.png">
+   <img src="images/Day2/day01_07_flopratio.png">
+   <img src="images/Day2/day01_06_fileprep.png">
+   <img src="images/Day2/day01_07_flopratio.png"> 
+   
 # Lesson 3
