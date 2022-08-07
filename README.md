@@ -14,6 +14,9 @@
     - [Placement command and magic tool to display](#placement-command-and-magic-tool-to-display)
   - [Day 3](#day-3)
     - [Custom layout design and simulation of a inverter insertion using tools](#custom-layout-design-and-simulation-of-a-inverter-insertion-using-tools)
+    - [Extract the spice netlist](#extract-the-spice-netlist)
+    - [Calcuations for rise, fall and delay time units](#calcuations-for-rise-fall-and-delay-time-units)
+    - 
     
 # Day 1 
 # OpenROAD flow
@@ -228,7 +231,7 @@ The ```picorv32a.floorplan.def``` contains the numeric values of the placed info
 # Custom layout design and simulation of a inverter insertion using tools 
 # CMOS Inverter Standard Cell
 
-The standard cell such as an inverter can be said tot be a buidling block of a complex vsli chip or design, it can be used as a buffer, an inverter (or not gate), and its extension can be used to build complementary logic such as NAND, NOR gates that in extersion are all that we need for a fully functional chip in the basic level. To learn to desing our own cell that can be characterized and customized for foundry parameters such as V_t_0 and doping concentration profile. We need to assiciate with the foundry spice ```model``` files. These files contain in intricate detail the device level profiles that are basically the physics that are inbuilt into the device, in this case the inverter. All of which are built using the PMOS and NMOS devices grown on the silicon wafer. 
+The standard cell such as an inverter can be said tot be a buidling block of a complex vsli chip or design, it can be used as a buffer, an inverter (or not gate), and its extension can be used to build complementary logic such as NAND, NOR gates that in extersion are all that we need for a fully functional chip in the basic level. To learn to desing our own cell that can be characterized and customized for foundry parameters such as $\text{Vt0}$ and doping concentration profile. We need to assiciate with the foundry spice ```model``` files. These files contain in intricate detail the device level profiles that are basically the physics that are inbuilt into the device, in this case the inverter. All of which are built using the PMOS and NMOS devices grown on the silicon wafer. 
 
 Now fast forwarding into the designed file which is the inverter, and its layout with the complete layout definition inbuilt into the ```sky130_inv.mag``` that is provided as part of the workshop but can also be designed using the layout tool with the process parameters in the spice model file. Just need to download the ```vsdstdcelldesign``` repository from GitHub to the openlane directory using the ```git clone``` command in the linux based system and then using the ```mag``` file to be opened using the magic tool with the def and lef switches on the terminal.
 
@@ -238,6 +241,14 @@ Now fast forwarding into the designed file which is the inverter, and its layout
    <img src="images/Day3/day03_2.png">
    <img src="images/Day3/day03_3.png">
    <img src="images/Day3/day03_4.png">
+   
+# Extract the spice netlist   
+To extract a spice netlist, then the parasitic capacitance and resistance.
+
+    extract all
+    ext2spice cthresh 0 rthresh 0
+    ext2spice
+   
    <img src="images/Day3/day03_5.png">
    <img src="images/Day3/day03_6.png">
    <img src="images/Day3/day03_7.png">
@@ -251,3 +262,15 @@ Now fast forwarding into the designed file which is the inverter, and its layout
    <img src="images/Day3/day03_15.png">
    <img src="images/Day3/day03_16.png">
    <img src="images/Day3/day03_16.png"> 
+
+# Calcuations for rise, fall and delay time units
+
+- Rise Time : The output to go from 20% to 80% 
+- Fall Time : The output to fall from 80% to 20% 
+- Delay  : The time difference for the sinal propagation from 50% of input to 50% of the output. (inevitable as the device requires to be charged and discharged due to the inherent capacitive effect. Faster, typical and slower cells come with different tech flavours and show effect on the sizing and technology parameters.
+
+$\text{Rise time} = 2.246 ns - 2.182 ns = 0.064 ns$
+
+$\text{Fall time} = 4.095 ns - 4.053 ns = 0.042 ns$
+
+$\text{Delay} = 2.21 ns - 2.15 ns = 0.06 ns$
