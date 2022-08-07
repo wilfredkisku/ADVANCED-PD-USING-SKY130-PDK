@@ -16,7 +16,6 @@
     - [Custom layout design and simulation of a inverter insertion using tools](#custom-layout-design-and-simulation-of-a-inverter-insertion-using-tools)
     - [Extract the spice netlist](#extract-the-spice-netlist)
     - [Calcuations for rise, fall and delay time units](#calcuations-for-rise-fall-and-delay-time-units)
-    - 
     
 # Day 1 
 # OpenROAD flow
@@ -250,6 +249,11 @@ To extract a spice netlist, then the parasitic capacitance and resistance.
     ext2spice
    
    <img src="images/Day3/day03_5.png">
+   
+# Inverter Layout in different graphics using Magic
+
+Run magic using ```magic -d XR -T sky130A.tech sky130_inv.mag &```. The ```-d XR``` option or switch is used to set a different graphics system and produces a clearer window.
+
    <img src="images/Day3/day03_6.png">
    <img src="images/Day3/day03_7.png">
    <img src="images/Day3/day03_8.png">
