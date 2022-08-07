@@ -20,7 +20,8 @@
     - [Calcuations for rise, fall and delay time units](#calcuations-for-rise-fall-and-delay-time-units)
 
   - [Day 4](#day-4)
-    - [Generated LEF file](#generated-lef-file)
+    - [Prepare MAG file](#prepare-mag-file)
+    - [Generate LEF file](#generate-lef-file)
     
 # Day 1 
 # OpenROAD flow
@@ -294,7 +295,7 @@ $\text{Delay} = 2.21 ns - 2.15 ns = 0.06 ns$
 
 # Day 4
 
-# Generated LEF file
+# Prepare MAG file
 
 The sequence in which the lef file needs to be generated is shows pictorially through the screenshots:
   - Obtain the track information through the skywater 130 nm porcess inside the ```tracks.info``` files.
@@ -305,6 +306,11 @@ The sequence in which the lef file needs to be generated is shows pictorially th
    <img src="images/Day4/day04_1.png">
    <img src="images/Day4/day04_2.png">
    <img src="images/Day4/day04_3.png">
+   
+The default grid is 0.01 um x 0.01 um as shown in the tkcon above. It can be changed to match the tracks.info grid for the li (locali) layer. 
+
+    grid 0.46um 0.34um 0.23um 0.17um
+   
    <img src="images/Day4/day04_4.png">
    <img src="images/Day4/day04_5.png">
    <img src="images/Day4/day04_6.png">
@@ -312,6 +318,11 @@ The sequence in which the lef file needs to be generated is shows pictorially th
    <img src="images/Day4/day04_8.png">
    <img src="images/Day4/day04_9.png">
    <img src="images/Day4/day04_10.png">
+
+
+# Generate LEF file
+
+The LEF file can be created through the magicc console using the ```lef write``` command which can be saved and verifed.
 
       VERSION 5.7 ;
         NOWIREEXTENSIONATPIN ON ;
