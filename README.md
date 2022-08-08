@@ -433,6 +433,9 @@ Generate the Power Distribution Network using the command ```gen_pen```, in the 
     gen_pdn
     
    <img src="images/Day5/day05_1.png">
+   
+The openlane flow or any other digital design flow is higly iterate in the sense that it needs to recurisively go through the process of revising the different parameters or sitches to get the desired timing information in terms of ```worst slack```, where the slack needs to be positive or zero. So the process of running  ```synthesis``` and ```floorplanning``` needs to be carried out. 
+
    <img src="images/Day5/day05_2.png">
    <img src="images/Day5/day05_3.png">
    <img src="images/Day5/day05_4.png">
