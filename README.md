@@ -459,6 +459,14 @@ The openlane flow or any other digital design flow is higly iterate in the sense
    <img src="images/Day5/day05_10.png">
    <img src="images/Day5/day05_11.png">
    <img src="images/Day5/day05_12.png">
+   
+
+
+Finally we need to run the routing using the command ```run_routing```, that would assimiate the entire process to generate the final GSDII file that has the hardened macros. Before this make sure to run the step to generate the floorplan, placement, cts and pdn generation.
+
+    run_routing
+
+   
    <img src="images/Day5/day05_13.png">
    <img src="images/Day5/day05_14.png">
    <img src="images/Day5/day05_15.png">
