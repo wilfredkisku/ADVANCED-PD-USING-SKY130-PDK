@@ -439,6 +439,17 @@ The openlane flow or any other digital design flow is higly iterate in the sense
    <img src="images/Day5/day05_2.png">
    <img src="images/Day5/day05_3.png">
    <img src="images/Day5/day05_4.png">
+ 
+ While ```echo``` helps in finding the current run configurations for the particular design, the ```set``` command is to set the run switch to a new value as mentioned in the ```Readme.md``` file.
+ 
+ 
+    %echo $::env(SYNTH_STRATEGY)
+    %set ::env(SYNTH_STRATEGY) "AREA 1" (or) "DELAY 1"
+    %echo $::env(SYNTH_BUFFERING)
+    %echo $::env(SYNTH_SIZING)
+    %set ::env(SYNTH_SIZING) 1
+    %echo $::env(SYNTH_DRIVING_CELL)
+   
    <img src="images/Day5/day05_5.png">
    <img src="images/Day5/day05_6.png">
    <img src="images/Day5/day05_7.png">
