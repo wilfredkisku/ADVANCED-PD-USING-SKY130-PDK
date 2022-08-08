@@ -24,6 +24,8 @@
     - [Generate LEF file](#generate-lef-file)
     - [Running the floorplan](#running-the-floorplan)
     - [Visualize the layout with magic](#visualize-the-layout-with-magic)
+  
+  - [Day 5](#day-5)
     
 # Day 1 
 # OpenROAD flow
@@ -421,3 +423,6 @@ Since in the newer version of the openlane tool the command ```run_floorplan``` 
    <img src="images/Day4/day04_20.png">
    <img src="images/Day4/day04_21.png">
    <img src="images/Day4/day04_22.png">
+
+# Day 5
+# TritonRoute and openSTA
