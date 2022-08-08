@@ -428,7 +428,10 @@ Since in the newer version of the openlane tool the command ```run_floorplan``` 
 # Day 5
 # TritonRoute and openSTA
 
+Generate the Power Distribution Network using the command ```gen_pen```, in the openlane tool flowchain:
 
+    gen_pdn
+    
    <img src="images/Day5/day05_1.png">
    <img src="images/Day5/day05_2.png">
    <img src="images/Day5/day05_3.png">
