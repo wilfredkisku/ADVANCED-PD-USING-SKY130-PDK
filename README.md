@@ -26,6 +26,7 @@
     - [Visualize the layout with magic](#visualize-the-layout-with-magic)
   
   - [Day 5](#day-5)
+    - [TritonRoute and openSTA](tritonroute-and-opensta)
     
 # Day 1 
 # OpenROAD flow
@@ -426,3 +427,24 @@ Since in the newer version of the openlane tool the command ```run_floorplan``` 
 
 # Day 5
 # TritonRoute and openSTA
+
+
+   <img src="images/Day5/day05_1.png">
+   <img src="images/Day5/day05_2.png">
+   <img src="images/Day5/day05_3.png">
+   <img src="images/Day5/day05_4.png">
+   <img src="images/Day5/day05_5.png">
+   <img src="images/Day5/day05_6.png">
+   <img src="images/Day5/day05_7.png">
+   <img src="images/Day5/day05_8.png">
+   <img src="images/Day5/day05_9.png">
+   <img src="images/Day5/day05_10.png">
+   <img src="images/Day5/day05_11.png">
+   <img src="images/Day5/day05_12.png">
+   <img src="images/Day5/day05_13.png">
+   <img src="images/Day5/day05_14.png">
+   <img src="images/Day5/day05_15.png">
+   <img src="images/Day5/day05_16.png">
+   <img src="images/Day5/day05_17.png">
+   <img src="images/Day5/day05_18.png">
+   <img src="images/Day5/day05_19.png">
