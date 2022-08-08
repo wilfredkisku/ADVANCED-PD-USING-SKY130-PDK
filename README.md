@@ -471,8 +471,11 @@ Finally we need to run the routing using the command ```run_routing```, that wou
    <img src="images/Day5/day05_14.png">
    <img src="images/Day5/day05_15.png">
    <img src="images/Day5/day05_16.png">
-   <img src="images/Day5/day05_17.png">
+   
+Finally the generate layout can be viewed using the ```magic``` tool, associating it with the ```lef```, ```def``` and the ```tech``` file for skywater 130 nm.
+   
    <img src="images/Day5/day05_18.png">
+   <img src="images/Day5/day05_17.png">
    <img src="images/Day5/day05_19.png">
    
 # References
