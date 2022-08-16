@@ -26,7 +26,7 @@
     - [Visualize the layout with magic](#visualize-the-layout-with-magic)
   
   - [Day 5](#day-5)
-    - [TritonRoute and openSTA](tritonroute-and-opensta)
+    - [TritonRoute and openSTA](#tritonroute-and-opensta)
   
   - [References](#references)
 # Day 1 
